@@ -10,12 +10,16 @@ html,body{
 	font-family: Helvetica;
 }
 
+/*HEADER*/
+
+/*make header into a grid*/
 header{
 	display: grid;
 	grid-template-columns: 100vw;
 	grid-template-rows: 90vh 5vh 5vh;
 }
 
+/*place header in center of screen in grid cell*/
 #logo{
 	grid-row-start: 1;
 	grid-row-end: 2;
@@ -59,6 +63,7 @@ header p{
 	animation-iteration-count: infinite;
 }
 
+/*Animate the arrow to float*/
 @keyframes floating{
 	0%{
 		margin-top: 0;
@@ -67,6 +72,121 @@ header p{
 		margin-top: -1vw;
 	}
 }
+
+
+
+
+/*INDEX*/
+
+#projects-container{
+	display: grid;
+	grid-template-columns: 100vw;
+	grid-template-rows: 10vh 50vh 75vh 75vh 75vh 75vh;
+}
+
+#navigation-buttons{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-top: 1px #fff solid;
+	border-bottom: 1px #fff solid;
+
+	position: sticky;
+	top: 0;
+	background-color: #232526;
+}
+
+.button{
+	background-color: transparent;
+	border: none;
+	color: #aec6cf;
+	font-size: 25px;
+	cursor: pointer;
+}
+
+#skills{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+
+#skills-grid{
+	display: grid;
+	grid-template-areas: 'a a a a a';
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+
+	padding: 10px;
+	width: 80%;
+	height: 40vh;
+	overflow-x: auto;
+	border: 1px #fff solid;
+	border-radius: 0.5vw;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#skills-grid h1{
+	min-width: 5vw;
+	max-height: 6vh;
+	background-color: blue;
+	border-radius: 10px;
+	box-sizing: border-box;
+	padding: 5px;
+	text-align: center;
+	margin: 0;
+}
+
+#data-mining{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+
+#web-development{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 4;
+	grid-row-end: 5;
+}
+
+#game-development{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 5;
+	grid-row-end: 6;
+}
+
+#mobile-development{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 6;
+	grid-row-end: 7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
