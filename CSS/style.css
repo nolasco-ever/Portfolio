@@ -78,12 +78,14 @@ header p{
 
 /*INDEX*/
 
+/*Container will be a grid*/
 #projects-container{
 	display: grid;
 	grid-template-columns: 100vw;
 	grid-template-rows: 10vh 50vh 75vh 75vh 75vh 75vh;
 }
 
+/*Make navigation buttons stick to top of screen when scrolled to*/
 #navigation-buttons{
 	grid-column-start: 1;
 	grid-column-end: 2;
@@ -95,6 +97,7 @@ header p{
 	justify-content: space-around;
 	border-top: 1px #fff solid;
 	border-bottom: 1px #fff solid;
+	z-index: 2;
 
 	position: sticky;
 	top: 0;
@@ -118,7 +121,7 @@ header p{
 
 #skills-grid{
 	display: grid;
-	grid-template-areas: 'a a a a a';
+	grid-template-areas: 'a a a a';
 	grid-column-gap: 10px;
 	grid-row-gap: 10px;
 
@@ -127,7 +130,7 @@ header p{
 	height: 40vh;
 	overflow-x: auto;
 	border: 1px #fff solid;
-	border-radius: 0.5vw;
+	border-radius: 5px;
 	box-sizing: border-box;
 	margin-left: auto;
 	margin-right: auto;
@@ -135,13 +138,97 @@ header p{
 
 #skills-grid h1{
 	min-width: 5vw;
-	max-height: 6vh;
-	background-color: blue;
-	border-radius: 10px;
+	border-radius: 5px;
 	box-sizing: border-box;
 	padding: 5px;
 	text-align: center;
 	margin: 0;
+	font-size: 20px;
+	color: #000;
+
+	/*center word vertically*/
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#skills-grid h1:nth-child(5n+0){
+	background-color: #C7CEEA;
+}
+
+#skills-grid h1:nth-child(5n+1){
+	background-color: #FF9AA2;
+}
+
+#skills-grid h1:nth-child(5n+2){
+	background-color: #B5EAE7;
+}
+
+#skills-grid h1:nth-child(5n+3){
+	background-color: #FFDAC1;
+}
+
+#skills-grid h1:nth-child(5n+4){
+	background-color: #E2F0CB;
+}
+
+.section-title{
+	margin-left: 1vw;
+}
+
+.section-grid{
+	display: grid;
+	grid-template-areas: 'a a a';
+	grid-row-gap: 10px;
+	grid-column-gap: 10px;
+
+	padding: 10px;
+	width: 80%;
+	height: 50vh;
+	overflow-x: auto;
+	border: 1px #fff solid;
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.project{
+	height: 15vw;
+	width: 25vw;
+	position: relative;
+}
+
+.project-img{
+	height: 15vw;
+	width: 25vw;
+	background-color: #fff;
+	border-radius: 5px;
+	top: 0;
+
+	transition: 0.5s ease;
+}
+
+.project-title{
+	position: absolute;
+	top: -2.8vh;
+	height: 15vw;
+	width: 25vw;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 5px;
+	text-align: center;
+	opacity: 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	transition: 0.5s ease;
+}
+
+.project-title:hover{
+	opacity: 1;
+	cursor: pointer;
 }
 
 #data-mining{
@@ -170,6 +257,37 @@ header p{
 	grid-column-end: 2;
 	grid-row-start: 6;
 	grid-row-end: 7;
+}
+
+/*INDEX - Altering dimensions for different screen sizes*/
+/*For small screens like phones, etc.*/
+@media screen and (max-width: 600px){
+	#navigation-buttons{
+		display: grid;
+		grid-template-areas: 'a a';
+		grid-column-gap: 5px;
+		grid-row-gap: 5px;
+	}
+	
+	.button{
+		font-size: 4vw;
+	}
+
+	#skills-grid{
+		grid-template-areas: 'a a';
+		width: 90%;
+	}
+}
+
+@media screen and (min-width: 550px) and (max-width: 750px){
+	.button{
+		font-size: 2vw;
+	}
+
+	#skills-grid{
+		grid-template-areas: 'a a';
+		width: 90%;
+	}
 }
 
 
