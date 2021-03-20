@@ -3,7 +3,7 @@
 ?>
 
 <body>
-	<div id="projects-container">
+	<div id="container">
 		<div id="navigation-buttons">
 			<button class="button">Data Mining</button>
 			<button class="button">Web Development</button>
@@ -55,182 +55,44 @@
 			</div>
 		</div>
 
-		<div id="data-mining">
+		<div id="projects-container">
 			<h1 class="section-title">Data Mining</h1>
 			<div class="section-grid">
 				<div class="project">
 					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
+					<h1 class="project-title">Adrianne Bartolo Personal Website</h1>
 				</div>
 				<div class="project">
 					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
+					<h1 class="project-title">House Price Predictor</h1>
 				</div>
 				<div class="project">
 					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
+					<h1 class="project-title">Media Recommendation System</h1>
 				</div>
 				<div class="project">
 					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
+					<h1 class="project-title">Pinicle: Social Media Application (Web)</h1>
 				</div>
 				<div class="project">
 					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
+					<h1 class="project-title">SIR Simulation</h1>
 				</div>
 				<div class="project">
 					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
+					<h1 class="project-title">Racecar Game</h1>
 				</div>
 				<div class="project">
 					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
+					<h1 class="project-title">Fight For Your Life</h1>
 				</div>
 				<div class="project">
 					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
+					<h1 class="project-title">Ball's Journey</h1>
 				</div>
 				<div class="project">
 					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-			</div>
-		</div>
-
-		<div id="web-development">
-			<h1 class="section-title">Web Development</h1>
-			<div class="section-grid">
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-			</div>
-		</div>
-
-		<div id="game-development">
-			<h1 class="section-title">Game Development</h1>
-			<div class="section-grid">
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-			</div>
-		</div>
-
-		<div id="mobile-development">
-			<h1 class="section-title">Mobile Development</h1>
-			<div class="section-grid">
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
+					<h1 class="project-title">Dating CHeater Simulator</h1>
 				</div>
 				<div class="project">
 					<img class="project-img" src="" alt="">

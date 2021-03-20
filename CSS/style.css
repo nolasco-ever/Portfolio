@@ -79,18 +79,18 @@ header p{
 /*INDEX*/
 
 /*Container will be a grid*/
-#projects-container{
+#container{
 	display: grid;
 	grid-template-columns: 100vw;
-	grid-template-rows: 10vh 50vh 75vh 75vh 75vh 75vh;
+	grid-template-rows: 55vh 10vh 90vh 5vh;
 }
 
 /*Make navigation buttons stick to top of screen when scrolled to*/
 #navigation-buttons{
 	grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 1;
-	grid-row-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
 
 	display: flex;
 	flex-direction: row;
@@ -115,8 +115,8 @@ header p{
 #skills{
 	grid-column-start: 1;
 	grid-column-end: 2;
-	grid-row-start: 2;
-	grid-row-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
 }
 
 #skills-grid{
@@ -172,6 +172,13 @@ header p{
 	background-color: #E2F0CB;
 }
 
+#projects-container{
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+}
+
 .section-title{
 	margin-left: 1vw;
 }
@@ -184,19 +191,19 @@ header p{
 
 	padding: 10px;
 	width: 80%;
-	height: 50vh;
+	height: 80vh;
 	overflow-x: auto;
 	border: 1px #fff solid;
 	border-radius: 5px;
 	box-sizing: border-box;
 	margin-left: auto;
 	margin-right: auto;
+	justify-content: center;
 }
 
 .project{
-	height: 15vw;
-	width: 25vw;
-	position: relative;
+	height: auto;
+	width: 18w;
 }
 
 .project-img{
@@ -205,89 +212,20 @@ header p{
 	background-color: #fff;
 	border-radius: 5px;
 	top: 0;
-
-	transition: 0.5s ease;
 }
 
 .project-title{
-	position: absolute;
-	top: -2.8vh;
-	height: 15vw;
+	height: auto;
 	width: 25vw;
-	background-color: rgba(0,0,0,0.5);
-	border-radius: 5px;
-	text-align: center;
-	opacity: 0;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-
-	transition: 0.5s ease;
-}
-
-.project-title:hover{
-	opacity: 1;
-	cursor: pointer;
-}
-
-#data-mining{
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 3;
-	grid-row-end: 4;
-}
-
-#web-development{
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 4;
-	grid-row-end: 5;
-}
-
-#game-development{
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 5;
-	grid-row-end: 6;
-}
-
-#mobile-development{
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 6;
-	grid-row-end: 7;
+	margin: 0;
+	color: #fff;
+	font-size: 110%;
 }
 
 /*INDEX - Altering dimensions for different screen sizes*/
 /*For small screens like phones, etc.*/
 @media screen and (max-width: 600px){
-	#navigation-buttons{
-		display: grid;
-		grid-template-areas: 'a a';
-		grid-column-gap: 5px;
-		grid-row-gap: 5px;
-	}
-	
-	.button{
-		font-size: 4vw;
-	}
 
-	#skills-grid{
-		grid-template-areas: 'a a';
-		width: 90%;
-	}
-}
-
-@media screen and (min-width: 550px) and (max-width: 750px){
-	.button{
-		font-size: 2vw;
-	}
-
-	#skills-grid{
-		grid-template-areas: 'a a';
-		width: 90%;
-	}
 }
 
 
