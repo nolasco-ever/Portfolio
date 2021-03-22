@@ -236,6 +236,14 @@ header p{
 	margin: 0;
 	color: #fff;
 	font-size: 110%;
+	background-color: transparent;
+	border: none;
+	text-align: left;
+	cursor: pointer;
+}
+
+#login{
+	text-align: center;
 }
 
 /*INDEX - Altering dimensions for different screen sizes*/

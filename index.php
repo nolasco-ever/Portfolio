@@ -58,50 +58,10 @@
 			</form>
 		</div>
 
-		<div id="projects-container">
-			<h1 class="section-title">[Title]</h1>
-			<div class="section-grid">
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Adrianne Bartolo Personal Website</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">House Price Predictor</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Media Recommendation System</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Pinicle: Social Media Application (Web)</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">SIR Simulation</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Racecar Game</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Fight For Your Life</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Ball's Journey</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Dating CHeater Simulator</h1>
-				</div>
-				<div class="project">
-					<img class="project-img" src="" alt="">
-					<h1 class="project-title">Title</h1>
-				</div>
-			</div>
-		</div>
+		<?php
+			include 'projects-grid.php';
+		?>
 	</div>
+
+	<a href=""><p id="login">Login</p></a>
 </body>
