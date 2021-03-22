@@ -4,13 +4,6 @@
 
 <body>
 	<div id="container">
-		<div id="navigation-buttons">
-			<button class="button">Data Mining</button>
-			<button class="button">Web Development</button>
-			<button class="button">Game Development</button>
-			<button class="button">Mobile Development</button>
-		</div>
-
 		<div id="skills">
 			<h1 class="section-title">Skills</h1>
 			<div id="skills-grid">
@@ -55,8 +48,18 @@
 			</div>
 		</div>
 
+		<div id="navigation-buttons">
+			<h2>Filter: </h2>
+			<form id="navigation-form" action="">
+				<input class="button" type="submit" value="All">
+				<input class="button" type="submit" value="Modeling and Simulation">
+				<input class="button" type="submit" value="Web Development">
+				<input class="button" type="submit" value="Game Development">
+			</form>
+		</div>
+
 		<div id="projects-container">
-			<h1 class="section-title">Data Mining</h1>
+			<h1 class="section-title">[Title]</h1>
 			<div class="section-grid">
 				<div class="project">
 					<img class="project-img" src="" alt="">
