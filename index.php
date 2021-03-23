@@ -63,5 +63,5 @@
 		?>
 	</div>
 
-	<a href=""><p id="login">Login</p></a>
+	<a href="upload-page.php"><p id="login">Login</p></a>
 </body>
