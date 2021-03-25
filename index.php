@@ -59,7 +59,7 @@
 		</div>
 
 		<?php
-			include 'projects-grid.php';
+			require 'projects-grid.php';
 		?>
 	</div>
 
