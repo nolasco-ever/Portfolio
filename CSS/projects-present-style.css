@@ -145,3 +145,66 @@ body{
 
 	background-color: orange;
 }
+
+/*Alter dimensions for different screen sizes*/
+/*For small screens like phones, etc.*/
+@media screen and (max-width: 600px){
+	#title-head{grid-row-end: 3;
+		width: 90vw;
+	}
+
+	#desc-container{
+		width: 90vw;
+	}
+
+	#img1{
+		width: 90vw;
+	}
+	
+	#img2{
+		width: 90vw;
+	}
+	
+	#img3{
+		width: 90vw;
+	}
+
+	#github{
+		height: 10vw;
+		width: 10vw;
+	}
+
+	#website{
+		height: 10vw;
+		width: 10vw;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
