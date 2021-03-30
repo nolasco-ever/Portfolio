@@ -51,7 +51,7 @@
 	// Function that will gather file info and pass it to compressImage() function
 	function compressed($img_name, $img_tmp){
   		// File info 
-  		$uploadPath = "uploads/";
+  		$uploadPath = $_SERVER['DOCUMENT_ROOT'].'/uploads/';
   		$imageUploadPath = $uploadPath.$img_name; 
   		$fileType = pathinfo($imageUploadPath, PATHINFO_EXTENSION);
   		 
