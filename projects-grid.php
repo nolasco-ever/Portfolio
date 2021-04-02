@@ -18,7 +18,7 @@
 						}
 					}
 
-					//Loopp through the array and display each entry
+					//Loop through the array and display each entry
 					foreach($datas as $data){
 						?>
 						<div class="project">
