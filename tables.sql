@@ -8,3 +8,7 @@ img1 longtext,
 img2 longtext,
 img3 longtext,
 category char(100) NOT NULL);
+
+create table Skills(
+skillID int primary key NOT NULL auto_increment,
+skill longtext);
