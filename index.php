@@ -187,6 +187,4 @@
 						?>
 		</div>
 	</div>
-
-	<a href="upload-page.php"><p id="login">Login</p></a>
 </body>
