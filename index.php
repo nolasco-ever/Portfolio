@@ -1,5 +1,7 @@
 <?php
 	include 'header.php';
+	//Connect to the database
+	require 'includes/dbh.inc.php';
 ?>
 
 <body>
@@ -7,44 +9,24 @@
 		<div id="skills">
 			<h1 class="section-title">Skills</h1>
 			<div id="skills-grid">
-				<h1>C++</h1>
-				<h1>JQuery</h1>
-				<h1>Javascript</h1>
-				<h1>Python</h1>
-				<h1>Adobe Illustrator</h1>
-				<h1>Adobe Premiere Pro</h1>
-				<h1>Machine Learning with Pandas in Python</h1>
-				<h1>Unity</h1>
-				<h1>Swift</h1>
-				<h1>Xcode</h1>
-				<h1>C#</h1>
-				<h1>HTML</h1>
-				<h1>PHP</h1>
-				<h1>CSS</h1>
-				<h1>SQL</h1>
-				<h1>Trick Shots lmaoo</h1>
-				<h1>Drive and Vibe</h1>
-				<h1>Video Editing</h1>
-				<h1>Jira</h1>
-				<h1>C++</h1>
-				<h1>JQuery</h1>
-				<h1>Javascript</h1>
-				<h1>Python</h1>
-				<h1>Adobe Illustrator</h1>
-				<h1>Adobe Premiere Pro</h1>
-				<h1>Machine Learning with Pandas in Python</h1>
-				<h1>Unity</h1>
-				<h1>Swift</h1>
-				<h1>Xcode</h1>
-				<h1>C#</h1>
-				<h1>HTML</h1>
-				<h1>PHP</h1>
-				<h1>CSS</h1>
-				<h1>SQL</h1>
-				<h1>Trick Shots lmaoo</h1>
-				<h1>Drive and Vibe</h1>
-				<h1>Video Editing</h1>
-				<h1>Jira</h1>
+				<?php
+					$sql = "SELECT * FROM Skills";
+					$query = mysqli_query($conn, $sql);
+					$skills = array();
+
+					if(mysqli_num_rows($query) > 0){
+						while($row = mysqli_fetch_assoc($query)){
+							$skills[] = $row;
+						}
+					}
+
+					// display all skills in the database
+					foreach($skills as $skill){
+						?>
+						<h1><?php echo $skill['skill']; ?></h1>
+						<?php
+					}
+				?>
 			</div>
 		</div>
 
@@ -61,8 +43,6 @@
 
 		<div id="projects-container">
 						<?php
-							//Connect to the database
-							require 'includes/dbh.inc.php';
 		
 							if(isset($_POST['all'])){
 						?>

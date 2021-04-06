@@ -24,6 +24,11 @@
 			<input id="submit-button" type="submit" value="Upload" name="upload">
 		</form>
 
+		<form action="includes/upload-skill.php" method="post" enctype="multipart/form-data">
+			<input type="text" name="skill" id="skill" placeholder="Enter skill...">
+			<input type="submit" name="upload-skill" value="Submit">
+		</form>
+
 		<table>
 				<tr>
 					<th colspan="2"><h2>Projects</h2></th>
