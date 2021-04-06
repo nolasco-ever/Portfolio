@@ -28,11 +28,33 @@
 				<tr>
 					<th colspan="2"><h2>Projects</h2></th>
 				</tr>
+				<?php
+					require 'includes/dbh.inc.php';
 
-				<tr>
-					<td class="proj-name"><p>Pinicle: Social Media Application (Web)</p></td>
-					<td class="delete"><form action=""><input class="delete-button" type="submit" value="Delete"></form></td>
-				</tr>
+					//Select all the rows from the Projects table and put them in an array
+					$sql = "SELECT projectID, title FROM Projects";
+					$query = mysqli_query($conn, $sql);
+					$datas = array();
+
+					if(mysqli_num_rows($query) > 0){
+						while($row = mysqli_fetch_assoc($query)){
+							$datas[] = $row;
+						}
+					}
+
+					//Loop through the array and display each entry
+					foreach($datas as $data){
+						?>
+						<tr>
+							<td class="proj-name"><p><?php echo $data['title']; ?></p></td>
+							<td class="delete"><form action="includes/delete-project.php" method="post" enctype="multipart/form-data">
+								<input name="id" type="text" value = "<?php echo $data['projectID']; ?>" style="display:none">
+								<input class="delete-button" type="submit" value="Delete" name="delete">
+							</form></td>
+						</tr>
+						<?php
+					}
+				?>
 			</table>
 	</body>		
 </html>

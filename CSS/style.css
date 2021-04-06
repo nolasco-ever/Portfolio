@@ -228,6 +228,7 @@ header p{
 	background-color: #fff;
 	border-radius: 5px;
 	top: 0;
+	object-fit: cover;
 }
 
 .project-title{
