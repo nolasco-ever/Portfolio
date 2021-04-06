@@ -50,7 +50,7 @@
 
 		<div id="navigation-buttons">
 			<h2>Filter: </h2>
-			<form id="navigation-form" action="">
+			<form id="navigation-form" action="projects-grid.php">
 				<input class="button" type="submit" value="All">
 				<input class="button" type="submit" value="Modeling and Simulation">
 				<input class="button" type="submit" value="Web Development">

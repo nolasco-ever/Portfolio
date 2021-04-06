@@ -22,10 +22,14 @@
 
 		$category = $_POST['category'];
 
-		// Variables to hold destination of compressed image
-		$img1_comp = compressed($img1_name, $img1_tmp);
-		$img2_comp = compressed($img2_name, $img2_tmp);
-		$img3_comp = compressed($img3_name, $img3_tmp);
+		$fileDestination1 = 'includes/uploads/'.$img1_name;
+		$fileDestination2 = 'includes/uploads/'.$img2_name;
+		$fileDestination3 = 'includes/uploads/'.$img3_name;
+
+		//move the photos to the uploads folder
+		move_uploaded_file($img1_tmp, $fileDestination1);
+		move_uploaded_file($img2_tmp, $fileDestination2);
+		move_uploaded_file($img3_tmp, $fileDestination3);
 
 		// Insert values into the SQL Projects table
 		$sql = "INSERT INTO Projects(title, description, github, website, img1, img2, img3, category) VALUES (?,?,?,?,?,?,?,?)";
@@ -36,7 +40,7 @@
 			exit();
 		}
 		else{
-			mysqli_stmt_bind_param($stmt, "ssssssss", $title, $desc, $git, $web, $img1_comp, $img2_comp, $img3_comp, $category);
+			mysqli_stmt_bind_param($stmt, "ssssssss", $title, $desc, $git, $web, $fileDestination1, $fileDestination2, $fileDestination3, $category);
 			mysqli_stmt_execute($stmt);
 
 			header("Location: ../upload-page.php?upload=success");
@@ -48,56 +52,58 @@
 		exit();
 	}
 
-	// Function that will gather file info and pass it to compressImage() function
-	function compressed($img_name, $img_tmp){
-  		// File info 
-  		$uploadPath = $_SERVER['DOCUMENT_ROOT'].'/uploads/';
-  		$imageUploadPath = $uploadPath.$img_name; 
-  		$fileType = pathinfo($imageUploadPath, PATHINFO_EXTENSION);
-  		 
-  		// Allow certain file formats 
-  		$allowTypes = array('jpg','png','jpeg'); 
-  		if(in_array($fileType, $allowTypes)){
-  		    // Compress size and upload image 
-  		    $compressedImage = compressImage($img_tmp, $imageUploadPath, 75); 
-  		     
-  		    if($compressedImage){ 
-  		        $compressedImageSize = filesize($compressedImage);
-  		        move_uploaded_file($img_tmp, $compressedImage);
-  		        return $compressedImage;	//Return the compressed image destination
-  		    }else{ 
-  		        $statusMsg = "Image compress failed!"; 
-  		    } 
-  		}else{ 
-  		    $statusMsg = 'Sorry, only JPG, JPEG & PNG files are allowed to upload.'; 
-  		}
-	}
+	// WILL USE BOTTOM CODE IN THE FUTURE
 
-	// Function that will compress image and return destination
-	function compressImage($source, $destination, $quality) { 
-	    // Get image info 
-	    $imgInfo = getimagesize($source); 
-	    $mime = $imgInfo['mime']; 
+	// Function that will gather file info and pass it to compressImage() function
+	// function compressed($img_name, $img_tmp){
+ //  		// File info 
+ //  		$uploadPath = $_SERVER['DOCUMENT_ROOT'].'/uploads/';
+ //  		$imageUploadPath = $uploadPath.$img_name; 
+ //  		$fileType = pathinfo($imageUploadPath, PATHINFO_EXTENSION);
+  		 
+ //  		// Allow certain file formats 
+ //  		$allowTypes = array('jpg','png','jpeg'); 
+ //  		if(in_array($fileType, $allowTypes)){
+ //  		    // Compress size and upload image 
+ //  		    $compressedImage = compressImage($img_tmp, $imageUploadPath, 75); 
+  		     
+ //  		    if($compressedImage){ 
+ //  		        $compressedImageSize = filesize($compressedImage);
+ //  		        move_uploaded_file($img_tmp, $compressedImage);
+ //  		        return $compressedImage;	//Return the compressed image destination
+ //  		    }else{ 
+ //  		        $statusMsg = "Image compress failed!"; 
+ //  		    } 
+ //  		}else{ 
+ //  		    $statusMsg = 'Sorry, only JPG, JPEG & PNG files are allowed to upload.'; 
+ //  		}
+	// }
+
+	// // Function that will compress image and return destination
+	// function compressImage($source, $destination, $quality) { 
+	//     // Get image info 
+	//     $imgInfo = getimagesize($source); 
+	//     $mime = $imgInfo['mime']; 
 	     
-	    // Create a new image from file 
-	    switch($mime){ 
-	        case 'image/jpeg': 
-	            $image = imagecreatefromjpeg($source); 
-	            break; 
-	        case 'image/png': 
-	            $image = imagecreatefrompng($source); 
-	            break; 
-	        case 'image/gif': 
-	            $image = imagecreatefromgif($source); 
-	            break; 
-	        default: 
-	            $image = imagecreatefromjpeg($source); 
-	    } 
+	//     // Create a new image from file 
+	//     switch($mime){ 
+	//         case 'image/jpeg': 
+	//             $image = imagecreatefromjpeg($source); 
+	//             break; 
+	//         case 'image/png': 
+	//             $image = imagecreatefrompng($source); 
+	//             break; 
+	//         case 'image/gif': 
+	//             $image = imagecreatefromgif($source); 
+	//             break; 
+	//         default: 
+	//             $image = imagecreatefromjpeg($source); 
+	//     } 
 	     
-	    // Save image 
-	    imagejpeg($image, $destination, $quality); 
+	//     // Save image 
+	//     imagejpeg($image, $destination, $quality); 
 	     
-	    // Return compressed image 
-	    return $destination; 
-	} 
+	//     // Return compressed image 
+	//     return $destination; 
+	// } 
 ?>
